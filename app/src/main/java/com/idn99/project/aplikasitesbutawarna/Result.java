@@ -17,7 +17,7 @@ public class Result extends AppCompatActivity {
         setContentView(R.layout.activity_result);
 
         inisial();
-
+        MainActivity.countDownTimer.cancel();
         String hasil = getIntent().getStringExtra("hasil");
         tvHasil.setText(hasil);
         main.setOnClickListener(new View.OnClickListener() {

@@ -23,7 +23,7 @@ public class MainActivity extends AppCompatActivity {
     private int x,jawaban,timer = 15000;
     private String hasil;
     private ArrayList<Data> listData = new ArrayList<>();
-    private CountDownTimer countDownTimer;
+    public static CountDownTimer countDownTimer;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -54,7 +54,6 @@ public class MainActivity extends AppCompatActivity {
                 intent.putExtra("hasil", hasil);
                 finish();
                 startActivity(intent);
-
             }
         }.start();
     }
@@ -98,7 +97,6 @@ public class MainActivity extends AppCompatActivity {
         if (edtJawaban.getText().toString().equals(String.valueOf(jawaban))){
             Toast.makeText(this, "Jawaban Anda Benar", Toast.LENGTH_SHORT).show();
             edtJawaban.setText("");
-            timer = 15000;
             setKonten();
         }else{
             hasil = "Segera Cek Mata Anda ke Dokter";
