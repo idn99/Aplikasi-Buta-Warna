@@ -1,0 +1,2 @@
+rootProject.name='Aplikasi Tes Buta Warna'
+include ':app'
